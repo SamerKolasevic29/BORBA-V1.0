@@ -29,7 +29,7 @@
 
 ## 🔜 Očekivanja za v1.2
 
-- 🔄 Kombinacija `<thread>` i `<iomanip>` za izradu univerzalne prenosive biblioteke `Funkcija.h`, kompatibilne sa sličnim tipovima ispisa
+- 🔄 Kombinacija `<thread>` i `<iomanip>` za izradu univerzalne prenosive biblioteke `Animacije.h`, kompatibilne sa sličnim tipovima ispisa
 
 
 ## ✅ Planirano za buduće verzije
