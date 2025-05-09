@@ -1,0 +1,29 @@
+# Kompajlirani fajlovi
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.out
+
+# Dev-C++ i Code::Blocks projekti
+*.dev
+*.cbp
+Makefile.win
+
+# Privremeni i backup fajlovi
+*.log
+*.tmp
+*.bak
+*~
+
+# VSCode i Visual Studio
+.vscode/
+*.sdf
+*.suo
+*.user
+*.opensdf
+
+# Debug direktoriji
+/debug/
+build/
