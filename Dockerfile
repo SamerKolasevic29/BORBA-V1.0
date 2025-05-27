@@ -7,9 +7,9 @@ RUN apt-get update && apt-get install -y \
     libjson-c-dev \
     libwebsockets-dev \
     build-essential \
-    && git clone https://github.com/tsl0922/ttyd.git \
-    && cd ttyd && mkdir build && cd build && cmake .. && make && make install \
-    && cd / && rm -rf ttyd
+ && git clone https://github.com/tsl0922/ttyd.git \
+ && cd ttyd && mkdir build && cd build && cmake .. && make && make install \
+ && cd / && rm -rf ttyd
 
 # Postavi radni direktorijum
 WORKDIR /app
@@ -20,8 +20,8 @@ COPY . .
 # Buildaj projekat (koristi make)
 RUN make
 
-# Exponuj ttyd port
-EXPOSE 7681
+# Exponuj port koji Render koristi (automatski postavlja $PORT)
+EXPOSE 10000
 
-# Pokreni aplikaciju kroz ttyd (u writable režimu)
-CMD ["ttyd", "--writable", "-p", "7681", "./borba"]
+# Pokreni aplikaciju kroz ttyd koristeći $PORT koji Render automatski dodijeli
+CMD ["sh", "-c", "ttyd --writable -p $PORT ./borba"]
